@@ -70,6 +70,7 @@ else:
     print("Optimal route:", route)
     
 '''
+Output:
 Enter the number of edges in the graph: 7
 Enter the edges in the format 'node1 node2 weight':
 A B 3
