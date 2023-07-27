@@ -41,7 +41,7 @@ print("Selected Coffee Beans[weight]:",[weight[i] for i in selected_items])
 print("Selected Cofee Beans[costs]:",[costs[i] for i in selected_items]) 
 
 '''
-Output
+Output``0
 Maximum Profits:  70
 Selected Coffee Beans[index]: [3, 1, 0]
 Selected Coffee Beans[weight]: [5, 3, 2]
