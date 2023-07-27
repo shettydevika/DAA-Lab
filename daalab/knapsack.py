@@ -24,24 +24,34 @@ def knapsack_max_profit(weight,costs,capacity):
     return table[num_items][capacity], selected_items 
 
 #example usage
-weight=[2,3,4,5] #weights of the coffee beans types
-costs=[10,20,30,40] #costs of the coffee bean types
-capacity=10 # maximum weight capacity of the bag
+#weight=[2,3,4,5] #weights of the coffee beans types
+#costs=[10,20,30,40] #costs of the coffee bean types
+#capacity=10 # maximum weight capacity of the bag
+
+weight = input("Enter the weights of the items (comma-separated): ")
+weight = [int(w) for w in weight.split(",")]
+costs = input("Enter the costs of the items (comma-separated): ")
+costs = [int(c) for c in costs.split(",")]
+capacity = int(input("Enter the capacity of the knapsack: "))
+
 max_profit,selected_items=knapsack_max_profit(weight,costs,capacity) 
-
-#weights = input("Enter the weights of the items (comma-separated): ")
-#weights = [int(w) for w in weights.split(",")]
-#costs = input("Enter the costs of the items (comma-separated): ")
-#costs = [int(c) for c in costs.split(",")]
-#capacity = int(input("Enter the capacity of the knapsack: "))
-
 print("Maximum Profits: ",max_profit)
 print("Selected Coffee Beans[index]:",selected_items)
 print("Selected Coffee Beans[weight]:",[weight[i] for i in selected_items])
 print("Selected Cofee Beans[costs]:",[costs[i] for i in selected_items]) 
 
 '''
-Output
+Output:
+Maximum Profits:  70
+Selected Coffee Beans[index]: [3, 1, 0]
+Selected Coffee Beans[weight]: [5, 3, 2]
+Selected Cofee Beans[costs]: [40, 20, 10]
+
+-----------OR-----------
+
+Enter the weights of the items (comma-separated): 2,3,4,5
+Enter the costs of the items (comma-separated): 10,20,30,40
+Enter the capacity of the knapsack: 10
 Maximum Profits:  70
 Selected Coffee Beans[index]: [3, 1, 0]
 Selected Coffee Beans[weight]: [5, 3, 2]
