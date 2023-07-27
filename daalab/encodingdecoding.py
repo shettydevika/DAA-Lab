@@ -80,3 +80,19 @@ print("Encoded text:", decoded_text)
 text_input = input("Enter text to encode: ")
 encoded_binary_text = encode_text(text_input, huffman_tree)
 print("Encoded binary text:", encoded_binary_text)
+
+'''
+Enter characters: a b c d e f g
+Enter frequencies: 10 15 12 3 4 13 1
+c -> 00
+f -> 01
+b -> 10
+e -> 1100
+g -> 11010
+d -> 11011
+a -> 111
+Enter the decoded text: 11110100
+Encoded text: abb
+Enter text to encode: dad
+Encoded binary text: 1101111111011
+'''
