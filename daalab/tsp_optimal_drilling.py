@@ -12,7 +12,7 @@ def get_distances(num_nodes):
 def tsp_optimal_drilling(distances):
   G=nx.Graph()
   G.add_weighted_edges_from((i,j,distances)for(i,j),distances in distances.items())
-  optimal_order=nx.approximation.traveling_salesman_problem(G,cycle=True)
+  optimal_length,optimal_order=nx.approximation.traveling_salesman_problem(G,cycle=True)
   return optimal_order
 
 def calculate_optimal_cost(drill_order,distances):
